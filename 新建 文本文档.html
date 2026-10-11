@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中天云商 - 产品质量溯源</title>
+    <style>
+        /* 基础重置与字体 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: #fff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        /* 顶部导航栏 (模拟微信/小程序头部) */
+        .top-nav {
+            background-color: #1a1a1a;
+            color: #fff;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            position: relative;
+        }
+        .nav-close {
+            font-size: 28px;
+            line-height: 1;
+            cursor: pointer;
+        }
+        .nav-title {
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .nav-title h1 {
+            font-size: 22px;
+            font-weight: normal;
+            margin-bottom: 2px;
+        }
+        .nav-title p {
+            font-size: 14px;
+            color: #aaa;
+        }
+        .nav-more {
+            font-size: 24px;
+            letter-spacing: 2px;
+            cursor: pointer;
+        }
+
+        /* Logo 横幅 */
+        .header-banner {
+            background-color: #0029b6; /* 深蓝色背景 */
+            padding: 25px 20px;
+            display: flex;
+            align-items: center;
+        }
+        .logo-icon {
+            width: 90px;
+            height: 60px;
+            margin-right: 15px;
+            /* 使用CSS简单模拟左侧黄白图形 */
+            background: linear-gradient(45deg, #ffb800 50%, #fff 50%);
+            clip-path: polygon(0 20%, 40% 0, 100% 0, 100% 100%, 40% 100%, 0 80%);
+            position: relative;
+        }
+        .logo-icon::after {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: 40px;
+            height: 40px;
+            background: #0029b6;
+            border-radius: 50%;
+        }
+        .logo-text h2 {
+            font-size: 36px;
+            color: #fff;
+            line-height: 1.1;
+        }
+        .logo-text h2 span {
+            color: #ffb800; /* "云商"黄色 */
+        }
+        .logo-text p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.7);
+            margin-top: 5px;
+            letter-spacing: 2px;
+        }
+
+        /* 溯源标题与认证码 */
+        .trace-section {
+            background-color: #f5f5f5;
+            padding: 25px 20px;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .trace-title {
+            font-size: 26px;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 20px;
+        }
+        .cert-code {
+            font-size: 16px;
+            color: #666;
+        }
+        .cert-code a {
+            display: block;
+            margin-top: 8px;
+            font-size: 18px;
+            color: #0029b6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* 产品信息区域 */
+        .content-area {
+            padding: 25px 20px;
+            flex-grow: 1;
+        }
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        .info-list {
+            list-style: none;
+        }
+        .info-list li {
+            font-size: 18px;
+            line-height: 2.2;
+            color: #444;
+        }
+        .info-list li span {
+            color: #000;
+        }
+
+        /* 底部截断模拟 */
+        .cut-off {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #444;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部导航 -->
+    <div class="top-nav">
+        <div class="nav-close">×</div>
+        <div class="nav-title">
+            <h1>中天云商</h1>
+            <p>yun.zt.net.cn</p >
+        </div>
+        <div class="nav-more">•••</div>
+    </div>
+
+    <!-- 蓝色Logo横幅 -->
+    <div class="header-banner">
+        <div class="logo-icon"></div>
+        <div class="logo-text">
+            <h2>中天<span>云商</span></h2>
+            <p>电子商务服务平台</p >
+        </div>
+    </div>
+
+    <!-- 溯源信息 -->
+    <div class="trace-section">
+        <div class="trace-title">中天钢铁集团-产品质量溯源平台</div>
+        <div class="cert-code">
+            国家工业标识认证码：
+            <a href=" ">88.218.888/CPV2603220016018</a >
+        </div>
+    </div>
+
+    <!-- 产品详情 -->
+    <div class="content-area">
+        <div class="section-title">产品信息</div>
+        <ul class="info-list">
+            <li>品名：<span>热轧带肋钢筋</span></li>
+            <li>规格：<span>Φ32mm*9000mm</span></li>
+            <li>执行标准：<span>GB 1499.2-2024</span></li>
+            <li>牌号：<span>HRB400E</span></li>
+            <li>批号：<span>V2603220016</span></li>
+            <li>包号：<span>018</span></li>
+            <li>重量：<span>1.988</span></li>
+            <li>支数：<span>35</span></li>
+            <li>生产日期：<span>20260322</span></li>
+        </ul>
+        <div class="cut-off">中天钢铁</div> <!-- 模拟底部被截断的文字 -->
+    </div>
+
+</body>
+</html>
